@@ -8,7 +8,7 @@
 
 body {
     background-color: darkgray;
-    font-family: "Druk-WideMedium", "Helvetica", Arial;
+    font-family: "Druk-WideMedium", Helvetica, sans-serif;
 }
 
 .scrolltext {
