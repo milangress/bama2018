@@ -28,15 +28,16 @@ body {
     grid-gap: 10px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 30px;
 }
 
 .title {
-    font-size: 57pt;
+    font-size: 4rem;
 
 }
 
 .content {
-    font-size: 24pt;
+    font-size: 2rem;
     grid-area: rechts;
     grid-row: 2;
     margin-bottom: 300px;
@@ -58,13 +59,10 @@ body {
 .content .absolventen .titel-arbeit {
     /*font-style: italic;*/
     text-transform: none;
-    font-size: 90%;
+    font-size: 0.9em;
     color: #68a1eb;
     line-height: 1.2;
     margin-left: 4rem;
-    text-transform: 
-    
-    
 }
 
 .footer {
@@ -129,5 +127,16 @@ Scrolling Type in Header
     }
     100% {
         transform: translate(-100%, 0);
+    }
+}
+
+@media(max-width: 1000px) {
+    :root {
+        font-size: 0.7rem;
+    }
+}
+@media(max-width: 700px) {
+    :root {
+        font-size: 0.5rem;
     }
 }
