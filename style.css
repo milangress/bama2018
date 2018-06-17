@@ -53,11 +53,6 @@ body {
     color: lightsteelblue;
     line-height: 1.1;
     margin-left: 4rem;
-    color: darkgray;
-    text-shadow: -5px -1px 0 lightsteelblue,
-    1px -1px 0 lightsteelblue,
-    -1px 1px 0 lightsteelblue,
-    1px 1px 0 lightsteelblue;
 }
 
 .footer {
