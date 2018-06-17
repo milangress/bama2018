@@ -1,3 +1,8 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+html, body{width:100%; height:100%; padding:0px; margin:0px}
+
 @font-face {
     font-family: 'Druk-WideMedium';
     src: url('fonts/Druk-WideMedium.eot?#iefix') format('embedded-opentype'), url('fonts/Druk-WideMedium.otf') format('opentype'),
@@ -14,10 +19,6 @@ a {
 body {
     background-color: darkgrey;
     font-family: "Druk-WideMedium", Helvetica, sans-serif;
-}
-
-.scrolltext {
-    height: 100vh;
 }
 
 .grid {
@@ -58,7 +59,7 @@ body {
     /*font-style: italic;*/
     text-transform: none;
     font-size: 90%;
-    color: skyblue;
+    color: #68a1eb;
     line-height: 1.2;
     margin-left: 4rem;
     text-transform: 
@@ -84,3 +85,49 @@ body {
 .grid div:nth-child(odd) {
     background-color: bisque;
 }*/
+
+/*
+Scrolling Type in Header
+*/
+
+
+.scrolltext-header {
+    height: 100vh;
+    font-size: 9vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.scrolltext-header h1, .scrolltext-header h3{
+    margin: 0;
+}
+
+.scroll {
+    height: 15vw;
+}
+
+.links {
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.links span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+.links2 span {
+    animation-delay: 5s;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
