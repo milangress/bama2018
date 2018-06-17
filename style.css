@@ -65,3 +65,61 @@ body {
 .grid div:nth-child(odd) {
     background-color: bisque;
 }*/
+
+/*
+Scrolling Type in Header
+*/
+
+
+.scrolltext {
+    height: 100vh;
+}
+
+.scroll {
+    font-size: 10vw;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.scroll div {
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+
+.scroll .links  {
+    display: flex;
+    animation: ticker-links  6s infinite linear;*/
+}
+.scroll .rechts {
+    animation: ticker-rechts  3s infinite linear;*/
+}
+
+.test {
+    width: 50vw;
+    animation: ticker-rechts  6s infinite linear;*/
+}
+
+
+@keyframes ticker-links {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-1422.95px, 0, 0);
+    }
+}
+
+@keyframes ticker-rechts {
+    0% {
+        transform: translate3d(-95%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0%, 0, 0);
+    }
+}
