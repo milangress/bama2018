@@ -110,6 +110,7 @@ Scrolling Type in HEADER
 }
 .scrolltext-header h1, .scrolltext-header h3{
     margin: 0;
+    white-space: nowrap;
 }
 
 .scroll {
