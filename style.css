@@ -23,17 +23,23 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 1fr;
     grid-template-areas: "links rechts";
     grid-gap: 10px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
+    font-size: 2rem;
 }
 
 .title {
-    font-size: 4rem;
+    font-size: 2rem;
 
+}
+.header {
+    font-size: inherit;
+    font-weight: normal;
+    margin: 0;
 }
 
 .content {
@@ -111,24 +117,20 @@ Scrolling Type in Header
     white-space: nowrap;
 }
 
-.links span {
-    display: inline-block;
-    padding-left: 100%;
-    animation: marquee 10s linear infinite;
-}
 
 .links2 span {
     animation-delay: 5s;
 }
 
-@keyframes marquee {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(-100%, 0);
-    }
+.width100 {
+    margin: 0 -50%;
+    width: 100vw;
 }
+.width100 span {
+    padding-right: 4rem;
+}
+
+
 
 @media(max-width: 1000px) {
     :root {
@@ -138,5 +140,9 @@ Scrolling Type in Header
 @media(max-width: 700px) {
     :root {
         font-size: 0.5rem;
+    }
+    .grid {
+        /*grid-template-columns: 100%;*/
+        /*grid-template-areas: "links", "rechts";*/
     }
 }
