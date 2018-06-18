@@ -40,6 +40,7 @@ body {
     margin: 0 auto;
     padding: 0 30px;
     font-size: 2rem;
+    margin-bottom: 5rem;
 }
 main h2, main h3 {
     margin-top: 0;
@@ -57,6 +58,9 @@ main h2, main h3 {
 }
 .main-info{
     font-size: 1rem;
+}
+.main-info p:first-child {
+    margin-top: 0;
 }
 
 .absolventen-section {
@@ -121,6 +125,9 @@ Footer
     font-size: 12pt;
     font-style: italic;
 }
+.footer img {
+    margin-right: 20px;
+}
 .footer2 {
     font-size: 8pt;
     font-family: Helvetica;
@@ -132,6 +139,7 @@ Footer
 .footer2 summary::-webkit-details-marker {
     display: none
 }
+
 
 
 
