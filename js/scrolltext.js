@@ -4,12 +4,12 @@
   } else if (typeof exports === 'object') {
     module.exports = factory();
   } else {
-    root.Marquee3k = factory();
+      root.ScrollBAMA = factory();
   }
 }(this, function() {
   'use strict';
 
-  class Marquee3k {
+    class ScrollBAMA {
     constructor(element, options) {
       this.element = element;
       this.selector = options.selector;
@@ -32,10 +32,41 @@
       this.element.appendChild(this.wrapper);
     }
 
-    _setupWrapper() {
-      this.wrapper = document.createElement('div');
-      this.wrapper.classList.add('scrolltext__wrapper');
-      this.wrapper.style.whiteSpace = 'nowrap';
+        static init(options = {selector: 'scrolltext'}) {
+            window.MARQUEES = [];
+            const marquees = Array.from(document.querySelectorAll(`.${options.selector}`));
+            let previousWidth = window.innerWidth;
+            let timer;
+
+            for (let i = 0; i < marquees.length; i++) {
+                const marquee = marquees[i];
+                const instance = new ScrollBAMA(marquee, options);
+                MARQUEES.push(instance);
+            }
+
+            animate();
+
+            function animate() {
+                for (let i = 0; i < MARQUEES.length; i++) {
+                    MARQUEES[i].animate();
+                }
+                window.requestAnimationFrame(animate);
+            }
+
+            window.addEventListener('resize', () => {
+                clearTimeout(timer);
+
+                timer = setTimeout(() => {
+                    const isLarger = previousWidth < window.innerWidth;
+                    const difference = window.innerWidth - previousWidth;
+
+                    for (let i = 0; i < MARQUEES.length; i++) {
+                        MARQUEES[i].repopulate(difference, isLarger);
+                    }
+
+                    previousWidth = this.innerWidth;
+                });
+            }, 250);
     }
 
     _setupContent() {
@@ -113,44 +144,13 @@
       }
     }
 
-    static init(options = { selector: 'scrolltext' }) {
-      window.MARQUEES = [];
-      const marquees = Array.from(document.querySelectorAll(`.${options.selector}`));
-      let previousWidth = window.innerWidth;
-      let timer;
-
-      for (let i = 0; i < marquees.length; i++) {
-        const marquee = marquees[i];
-        const instance = new Marquee3k(marquee, options);
-        MARQUEES.push(instance);
-      }
-
-      animate();
-
-      function animate() {
-        for (let i = 0; i < MARQUEES.length; i++) {
-          MARQUEES[i].animate();
-        }
-        window.requestAnimationFrame(animate);
-      }
-
-      window.addEventListener('resize', () => {
-        clearTimeout(timer);
-
-        timer = setTimeout(() => {
-          const isLarger = previousWidth < window.innerWidth;
-          const difference = window.innerWidth - previousWidth;
-
-          for (let i = 0; i < MARQUEES.length; i++) {
-            MARQUEES[i].repopulate(difference, isLarger);
-          }
-
-          previousWidth = this.innerWidth;
-        });
-      }, 250);
+        _setupWrapper() {
+            this.wrapper = document.createElement('div');
+            this.wrapper.classList.add('scroll_bama__wrapper');
+            this.wrapper.style.whiteSpace = 'nowrap';
     }
   }
 
-  return Marquee3k;
+    return ScrollBAMA;
 
 }));
