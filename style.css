@@ -141,4 +141,8 @@ Scrolling Type in Header
     :root {
         font-size: 0.5rem;
     }
+    .grid {
+        /*grid-template-columns: 100%;*/
+        /*grid-template-areas: "links", "rechts";*/
+    }
 }
