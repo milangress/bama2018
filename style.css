@@ -23,17 +23,23 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 1fr;
     grid-template-areas: "links rechts";
     grid-gap: 10px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
+    font-size: 2rem;
 }
 
 .title {
-    font-size: 4rem;
+    font-size: 2rem;
 
+}
+.header {
+    font-size: inherit;
+    font-weight: normal;
+    margin: 0;
 }
 
 .content {
@@ -62,7 +68,7 @@ body {
     font-size: 0.9em;
     color: #68a1eb;
     line-height: 1.2;
-    /*margin-left: 4rem;*/
+    margin-left: 4rem;
 }
 
 .footer {
