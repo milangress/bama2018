@@ -124,6 +124,10 @@ Footer
 .footer {
     font-size: 12pt;
     font-style: italic;
+    grid-auto-columns: max-content;
+}
+.footer p {
+    margin-top: 0;
 }
 .footer img {
     margin-right: 20px;
@@ -147,13 +151,34 @@ Footer
     :root {
         font-size: 0.7rem;
     }
+    .grid {
+        grid-template-columns: 1fr 3fr;
+    }
+    .footer2 {
+        font-size: 12px;
+    }
 }
-@media(max-width: 700px) {
+@media(max-width: 760px) {
     :root {
         font-size: 0.5rem;
     }
     .grid {
-        /*grid-template-columns: 100%;*/
-        /*grid-template-areas: "links", "rechts";*/
+        grid-template-columns: 1fr;
+    }
+    .grid>* {
+        grid-column: 1;
+    }
+    .grid>.main-info {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .grid>.absolventen-header {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .grid>.absolventen-section {
+        grid-column: 1;
+        grid-row: 4;
+        margin-bottom: 100px;
     }
 }
