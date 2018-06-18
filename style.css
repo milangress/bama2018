@@ -47,10 +47,10 @@ main h2, main h3 {
 
 .title {
     font-size: 2rem;
-    line-height: 1,1;
+    line-height: 1.1;
 
 }
-.header {
+.absolventen-header {
     font-size: inherit;
     font-weight: normal;
     margin: 0;
@@ -59,29 +59,27 @@ main h2, main h3 {
     font-size: 1rem;
 }
 
-.content {
+.absolventen-section {
     font-size: 2rem;
-    -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: rechts;
     -ms-grid-row: 2;
     grid-row: 2;
     margin-bottom: 300px;
-    line-height: 1.2;
-}
-
-.content .absolventen {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-    text-transform: uppercase;
     line-height: 1.3;
     font-style: italic;
 }
 
-.content .absolventen .titel-arbeit {
-    /*font-style: italic;*/
-    text-transform: none;
+.absolventen-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+.absolventen-section .name-absolvent{
+    text-transform: uppercase;
+}
+
+.absolventen-section .titel-arbeit {
     font-size: 0.9em;
     color: #68a1eb;
     line-height: 1.2;
