@@ -106,7 +106,7 @@ Scrolling Type in HEADER
     letter-spacing: 0.1em;
     background-image: url(bilder/hintergrund.svg);
     background-size: cover;
-    background-position: 50% 100%;
+    background-position: 50% 98%;
 }
 .scrolltext-header h1, .scrolltext-header h3{
     margin: 0;
